@@ -1,0 +1,204 @@
+print("PROGRAMMED BY: JOSEPH SIMON S. PRUDENTE")
+print("LIST/ARRAY METHODS")
+
+a = [2, 4, 5, 6, 5, 56, 33, 43, 11, 10]
+
+def menu():
+    print("\n")
+    print("Array:", a)
+    print("\n")
+    print("\t*********MENU***********\t")
+    choice = input("""
+                      1: Add an Element
+                      2: Insert an Element 
+                      3: Modify
+                      4: Sum
+                      5: Delete an Element 
+                      6: Sort 
+                      7: Reverse the order
+                      8: Min & Max
+                      9: Clear
+                     10:  EXIT
+
+                      Please enter your choice: """)
+    if choice == "1":
+        n = int(input("Enter an elements : "))
+        a.append(n)
+        print(a)
+        i = str.upper(input("Would you like to repeat the program again? Y/N:  "))
+        while True:
+            if i == "Y":
+                print(" ")
+                menu()
+            elif i == 'N':
+                end = True
+                print("Program is closing...")
+                exit()
+                break
+            else:
+                print("wrong input, try again")
+                i = str.upper(input("Would you like to repeat the program again? Y/N:  "))
+
+    elif choice == "2":
+        p = int(input("Enter an elements : "))
+        a.insert(0, p)
+        print(a)
+
+        i = str.upper(input("Would you like to repeat the program again? Y/N:  "))
+        while True:
+            if i == "Y":
+                print(" ")
+                menu()
+            elif i == 'N':
+                end = True
+                print("Program is closing...")
+                exit()
+                break
+            else:
+                print("wrong input, try again")
+                i = str.upper(input("Would you like to repeat the program again? Y/N:  "))
+
+    elif choice == "3":
+        rem = int(input("replace: "))
+        mod = int(input("modify: "))
+        a[rem] = mod
+        print(a)
+        i = str.upper(input("Would you like to repeat the program again? Y/N:  "))
+        while True:
+            if i == "Y":
+                print(" ")
+                menu()
+            elif i == 'N':
+                end = True
+                print("Program is closing...")
+                exit()
+                break
+            else:
+                print("wrong input, try again")
+                i = str.upper(input("Would you like to repeat the program again? Y/N:  "))
+    elif choice == "4":
+        total = sum(a)
+        print(total)
+        i = str.upper(input("Would you like to repeat the program again? Y/N:  "))
+        while True:
+            if i == "Y":
+                print(" ")
+                menu()
+            elif i == 'N':
+                end = True
+                print("Program is closing...")
+                exit()
+                break
+            else:
+                print("wrong input, try again")
+                i = str.upper(input("Would you like to repeat the program again? Y/N:  "))
+    elif choice == "5":
+        p = int(input("Delete: "))
+        a.remove(p)
+        print(a)
+        i = str.upper(input("Would you like to repeat the program again? Y/N:  "))
+        while True:
+            if i == "Y":
+                print(" ")
+                menu()
+            elif i == 'N':
+                end = True
+                print("Program is closing...")
+                exit()
+                break
+            else:
+                print("wrong input, try again")
+                i = str.upper(input("Would you like to repeat the program again? Y/N:  "))
+    elif choice == "6":
+        a.sort()
+        print(a)
+        i = str.upper(input("Would you like to repeat the program again? Y/N:  "))
+        while True:
+            if i == "Y":
+                print(" ")
+                menu()
+            elif i == 'N':
+                end = True
+                print("Program is closing...")
+                exit()
+                break
+
+            else:
+                print("wrong input, try again")
+                i = str.upper(input("Would you like to repeat the program again? Y/N:  "))
+    elif choice == "7":
+        a.reverse()
+        print(a)
+        i = str.upper(input("Would you like to repeat the program again? Y/N:  "))
+        while True:
+            if i == "Y":
+                print(" ")
+                menu()
+            elif i == 'N':
+                end = True
+                print("Program is closing...")
+                exit()
+                break
+            else:
+                print("wrong input, try again")
+                i = str.upper(input("Would you like to repeat the program again? Y/N:  "))
+    elif choice == "8":
+        pick = input("""
+                      1: MINIMUM
+                      2: MAXIMUM
+
+
+                       Please enter your choice: """)
+        if pick == "1":
+            smallest = min(a)
+            print(smallest)
+            i = str.upper(input("Would you like to repeat the program again? Y/N:  "))
+            while True:
+                if i == "Y":
+                    print(" ")
+                    menu()
+                elif i == 'N':
+                    end = True
+                    print("Program is closing...")
+                    exit()
+                    break
+                else:
+                    print("wrong input, try again")
+                    i = str.upper(input("Would you like to repeat the program again? Y/N:  "))
+
+        if pick == "2":
+            highest = max(a)
+            print(highest)
+            i = str.upper(input("Would you like to repeat the program again? Y/N:  "))
+            while True:
+                if i == "Y":
+                    print(" ")
+                    menu()
+                elif i == 'N':
+                    end = True
+                    print("Program is closing...")
+                    exit()
+                    break
+                else:
+                    print("wrong input, try again")
+                    i = str.upper(input("Would you like to repeat the program again? Y/N:  "))
+    elif choice == "9":
+        a.clear()
+        print(a)
+        i = str.upper(input("Would you like to repeat the program again? Y/N:  "))
+        while True:
+            if i == "Y":
+                print(" ")
+                menu()
+            elif i == 'N':
+                end = True
+                print("Program is closing...")
+                exit()
+                break
+            else:
+                print("wrong input, try again")
+                i = str.upper(input("Would you like to repeat the program again? Y/N:  "))
+    elif choice == "10":
+        exit()
+
+menu()
